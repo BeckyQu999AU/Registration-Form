@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Registration Form</h1>
+      <form action="" class="container">
+        <div class="firstName">
+          <label for="firstName" class="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Andy" required />
+        </div>
+        <div class="lastName">
+          <label for="lastName" class="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Smith" required />
+        </div>
+        <div class="email">
+          <label for="email" class="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="abc@example.com"
+            maxlength="100"
+            required
+          />
+        </div>
+        <div class="password">
+          <label for="password" class="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            autocomplete="off"
+            placeholder="********"
+            minlength="8"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Password must contain at least 8 characters, including upper/lowercase letters and a number"
+            required
+          />
+        </div>
+        <div class="confirmPassword">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            class="confirmPassword"
+            id="confirmPassword"
+            autocomplete="new-password"
+            placeholder="********"
+            required
+          />
+        </div>
+        <div class="birthday">
+          <label for="birthday">Date of Birth</label>
+          <input type="date" id="birthday" required />
+        </div>
+        <div class="gender">
+          <label class="gender">Gender</label>
+          <input type="radio" value="male" id="male" name="gender" />
+          <label for="male">Male</label>
+          <input type="radio" value="female" id="female" name="gender" />
+          <label for="female">Female</label>
+          <input type="radio" value="other" id="other" name="gender" />
+          <label for="other">Other</label>
+        </div>
+        <div class="about">
+          <label for="about">About Me</label>
+          <textarea name="about" id="about" required></textarea>
+        </div>
+        <div class="profession">
+          <label for="profession">Choose Your Profession</label>
+          <select id="profession" name="profession" required>
+            <option value="">Please choose an option</option>
+            <option value="web-development">Web Development</option>
+            <option value="data-analytics">Data Analytics</option>
+            <option value="ui-ux-design">UI/UX Design</option>
+          </select>
+        </div>
+        <button class="btn">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
